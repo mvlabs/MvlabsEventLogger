@@ -1,0 +1,41 @@
+{
+    "name": "mvlabs/mvlabs-eventlogger",
+    "description": "MvlabsEventLogger is a ZF2 module that allow to log user events in easy way based on event listener.",
+    "license": "MIT",
+    "type": "zf2-module",
+    "keywords": [
+        "event",
+        "log",
+        "user events log",
+        "logging", 
+        "MvaAssociati", 
+        "MvLabs", 
+        "zf2"
+    ],
+    "homepage": "https://github.com/mvlabs/MvlabsEventLogger.git",
+    "authors": [
+        {
+            "name": "Stefano Valle",
+            "email": "s.valle@mvlabs.it",
+            "homepage": "http://www.mvlabs.it/en/"
+        },
+        {
+            "name": "Diego Drigani",
+            "email": "d.drigani@mvlabs.it",
+            "homepage": "http://www.mvlabs.it/en/"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "zendframework/zendframework": "~2.5",
+        "doctrine/doctrine-orm-module": "0.9.*",
+    },    
+    "autoload": {
+        "psr-0": {
+            "MvlabsEventLogger": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
