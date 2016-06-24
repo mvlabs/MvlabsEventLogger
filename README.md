@@ -14,7 +14,6 @@ Installation
 
 1. Add to your `composer.json` :
 
-    $composer require liuggio/excelbundle
     
     ```bash
     $ php composer.phar require mvlabs/mvlabs-eventlogger
@@ -24,7 +23,7 @@ Installation
 2. Now tell composer to download MvlabsEventLogger by running the command:
 
     ```bash
-    $ php composer.phar update
+    $ php composer.phar update mvlabs/mvlabs-eventlogger
     ```
 
 
