@@ -1,11 +1,20 @@
 <?php
 namespace MvlabsEventLogger;
+
 use Zend\Mvc\MvcEvent;
+
+use Zend\ModuleManager\ModuleManagerInterface;
+
 
 class Module
 {
+    public function onBootstrap(MvcEvent $e)
+    {
+        $em = $e->getApplication()->getEventManager();
+        $em->attach('dispatch', array($this, 'onDispatch'), 1000);
+    }
 
-    public function onBootstrap (MvcEvent $e)
+    public function onDispatch (MvcEvent $e)
     {
         $application = $e->getApplication();
         $serviceManager = $application->getServiceManager();
@@ -20,7 +29,7 @@ class Module
         }
     }
 
-    public function getConfig ()
+    public function getConfig()
     {
         return include __DIR__ . '/config/module.config.php';
     }
@@ -36,7 +45,7 @@ class Module
         ];
     }
 
-    public function getServiceConfig ()
+    public function getServiceConfig()
     {
         return [
             'invokables' => [
